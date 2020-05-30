@@ -1,0 +1,151 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;   
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --very-dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --very-light-gray: hsl(0, 0%, 98%);
+    --white: white;
+    max-width: 380px;
+    margin: auto;
+}
+
+body{
+    background: var(--very-light-gray);
+}
+header{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.h2-header,
+.card-title{
+    color: var(--very-dark-blue);
+}
+
+.p-header,
+.card-info{
+    color: var(--grayish-blue);
+}
+.h2-header,
+.h1-header{
+    margin: 0;
+    font-size: 1.6rem;
+}
+
+.h1-header{
+    
+    color: var(--very-dark-blue);
+    font-weight: lighter;    
+}
+
+.grid{
+    display: grid;
+    grid-row-gap: 25px;
+}
+
+.card{
+    background: var(--white);
+    padding: .5rem 2rem 1rem 1rem;
+    border-radius: .5rem;
+    overflow: hidden;
+    box-shadow: 2px 5px 15px var(--grayish-blue);
+    width: 22rem;
+    height: 15rem;
+    margin:9;
+}
+.supervisor{
+    border-top: 4px solid var(--cyan);
+}
+
+.team-builder{
+    border-top: 4px solid var(--red);
+}
+
+.karma{
+    border-top: 4px solid var(--orange);
+}
+
+.calculator{
+    border-top: 4px solid var(--blue);
+}
+
+.card-info{
+    display: block;
+    font-size: .9rem;
+    margin-bottom: 4em;
+}
+
+.image-card{
+    float: right;
+}
+
+@media screen and (min-width: 1200px){
+    *{
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    body{
+        min-height: 900px;
+    }
+
+    header{
+        height: 9rem;
+        padding-top: 3.5rem;
+    }
+
+    .h1-header,
+    .h2-header{
+        font-size: 1.6em;
+    }
+    .p-header{
+        font-size: .75em;
+        width:27rem;
+    }
+    
+    .card{
+        position: absolute;
+    }
+
+    .grid{
+        display: flex;
+        min-width: 900px;
+        min-height: 600px;
+        position: relative;
+    }
+
+    .supervisor,
+    .calculator{
+        top: 11rem;
+    }
+
+    .supervisor{
+        left: 3rem;
+    }
+
+    .calculator{
+        right: 3rem;
+    }
+
+    .team-builder,
+    .karma{
+        left: 26.3rem;
+    }
+
+    .team-builder{
+        top: 2.9rem;
+    }
+
+    .karma{
+        bottom: 2.9rem;
+    }
+}
